@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useQuery, useLazyQuery } from '@apollo/react-hooks';
 import styled from 'styled-components';
 
+import { GlobalStyle } from './GlobalStyle';
+
 import { GET_CONTINENTS, GET_CONTINENT, GET_COUNTRY } from './Queries';
 
 export default function App() {
@@ -26,7 +28,8 @@ export default function App() {
 
 	return (
 		<div>
-			<h1>Countries GraphQL API</h1>
+			<GlobalStyle />
+			<Header>Countries GraphQL API</Header>
 			<Wrapper>
 				<Column>
 					<h2>Continents</h2>
@@ -91,16 +94,39 @@ export default function App() {
 	);
 }
 
+const Header = styled.h1`
+	padding: 0.5rem 1rem;
+	border-bottom: 1px solid silver;
+`;
+
 const Button = styled.div`
 	cursor: pointer;
+	font-size: 1.4rem;
+	margin: 0.5rem 0;
+
+	&:hover {
+		text-decoration: underline;
+	}
 `;
 
 const Wrapper = styled.div`
+	width: 98%;
+	margin: 2rem auto 0;
 	display: flex;
 	flex-wrap: wrap;
 `;
 
 const Column = styled.div`
 	flex-grow: 1;
-	border: 1px solid black;
+	max-height: 100vh;
+	overflow-y: auto;
+	margin: 0 1%;
+	padding: 0.5rem 1rem;
+	border: 1px solid silver;
+	border-radius: 0.4rem;
+
+	p,
+	li {
+		margin: 0.5rem 0;
+	}
 `;
