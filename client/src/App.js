@@ -115,7 +115,6 @@ export default function App() {
 const Header = styled.h1`
 	padding: 0.5rem 1rem;
 	border-bottom: 1px solid silver;
-	// background-color: #010101;
 	color: silver;
 `;
 
@@ -134,6 +133,10 @@ const Wrapper = styled.div`
 	margin: 1rem auto 0;
 	display: flex;
 	flex-wrap: wrap;
+
+	@media screen and (max-width: 410px) {
+		flex-direction: column;
+	}
 `;
 
 const Column = styled.div`
@@ -144,6 +147,14 @@ const Column = styled.div`
 	padding: 0.5rem 1rem;
 	border-radius: 0.4rem;
 	background-color: rgba(255, 255, 255, 0.6);
+
+	@media screen and (max-width: 680px) {
+		max-height: 48vh;
+	}
+
+	@media screen and (max-width: 410px) {
+		max-height: 26vh;
+	}
 
 	ul {
 		list-style-type: square;

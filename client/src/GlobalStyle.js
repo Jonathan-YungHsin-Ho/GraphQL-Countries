@@ -16,9 +16,11 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    height: 100vh;
     line-height: 1.5;
     font-family: 'Open Sans', sans-serif;
     background-image: url(${img});
+    background-repeat: no-repeat;
     background-size: cover;
   }
 
