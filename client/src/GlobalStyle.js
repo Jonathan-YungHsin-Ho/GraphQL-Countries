@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import img from './images/nasa-Q1p7bh3SHj8-unsplash.jpg';
 
 export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
@@ -17,6 +18,8 @@ export const GlobalStyle = createGlobalStyle`
   body {
     line-height: 1.5;
     font-family: 'Open Sans', sans-serif;
+    background-image: url(${img});
+    background-size: cover;
   }
 
   h1 {
@@ -30,4 +33,23 @@ export const GlobalStyle = createGlobalStyle`
   p, li {
     font-size: 1.4rem;
   }
+
+  ::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 0.4rem;
+    // background: silver;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0.4rem;
+    margin-right: 0.2rem;
+    background: #888;
+  }
+
+  // ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  // }
 `;
