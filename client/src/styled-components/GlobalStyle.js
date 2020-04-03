@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import img from './images/nasa-Q1p7bh3SHj8-unsplash.jpg';
+import img from '../images/nasa-Q1p7bh3SHj8-unsplash.jpg';
 
 export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');

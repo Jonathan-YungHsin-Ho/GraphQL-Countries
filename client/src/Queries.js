@@ -10,7 +10,7 @@ export const GET_CONTINENTS = gql`
 `;
 
 export const GET_CONTINENT = gql`
-	query GetContinent($code: String!) {
+	query GetContinent($code: ID!) {
 		continent(code: $code) {
 			countries {
 				code
@@ -21,7 +21,7 @@ export const GET_CONTINENT = gql`
 `;
 
 export const GET_COUNTRY = gql`
-	query GetCountry($code: String!) {
+	query GetCountry($code: ID!) {
 		country(code: $code) {
 			name
 			native
